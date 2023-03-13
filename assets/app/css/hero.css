@@ -104,7 +104,7 @@
 }
 
 .fancy:hover > .outer:nth-child(2) {
-  transform: translate(-40%, 20%) rotate(4deg);
+    transform: translate(-40%, 20%) rotate(4deg);
 }
 
 .fancy:hover > .outer:nth-child(3) {

@@ -36,7 +36,7 @@
     --small-font-size: .813rem;
 
     /*====General Padding=====*/
-    --padding:1rem;
+    --padding:.35rem;
 }
 
 *{
@@ -58,7 +58,6 @@ body{
 section > h1 {
     color: var(--lightmode-text-color);
     text-align: center;
-    margin-bottom: 2rem;
     font-family: var(--header-font-family);
 }
 
@@ -74,8 +73,7 @@ section > h1 {
 .carousel-slide{
     flex: 1 0 100%;
     position: relative;
-    bottom: 0;
-    
+    bottom: 0; 
 }
 
 .fade {

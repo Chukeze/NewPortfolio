@@ -60,6 +60,107 @@
     text-align: center;
 }
 
+@media (min-width:320px) {
+    #main-project-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 275px);
+        row-gap: .5rem;
+    }
+    .project-card{
+        flex-flow: row nowrap;
+        width: 100%;
+        column-gap: .35rem;
+        border-radius: 0 0 25px 0;
+    }
+    .project-img {
+        width: 100%;
+        height: 100%;
+    }
+    .project-info__title{
+        font-size: .5rem;
+    }
+    .project-info__contents{
+        gap: .05rem;
+        font-size: .35rem;
+        line-height: 1rem;
+    }
+    .project-info{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width:425px) {
+    #main-project-container{
+        display: grid;
+        grid-template-columns: repeat(2, .5fr);
+        grid-template-rows: repeat(2, auto);
+        row-gap: .5rem;
+        justify-items: center;
+    }
+    .project-card{
+        flex-flow: column nowrap;
+        width: 98%;
+        column-gap: .75rem;
+        border-radius: 0 0 50px 0;
+    }
+    .project-img {
+        width: 100%;
+        height: 100%;
+    }
+    .project-info__contents{
+        gap: 1.25rem;
+        font-size: .45rem;
+        line-height: 1.1rem;
+    }
+    .project-info{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width:768px) {
+    #main-project-container{
+        display: grid;
+        grid-template-columns: repeat(2, .75fr);
+        grid-template-rows: repeat(2, auto);
+        row-gap: .5rem;
+        justify-items: center;
+    }
+    .project-card{
+        flex-flow: column nowrap;
+        width: 80%;
+        column-gap: .75rem;
+        border-radius: 0 0 50px 0;
+    }
+    .project-img {
+        width: 100%;
+        height: 100%;
+    }
+    .project-info__contents{
+        gap: 1.25rem;
+        font-size: .45rem;
+        line-height: 1.1rem;
+    }
+    .project-info{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .project-card{
+        width: 70%;
+        column-gap: .75rem;
+    }
+    .project-info__contents{
+        gap: 1.25rem;
+        font-size: .55rem;
+        line-height: 1.1rem;
+    }
+}
+
 /**=====Side Project =====*/
 
 
@@ -123,6 +224,37 @@
 .capsule-slider__cards:nth-child(20):hover{
     transform:translateX(15%) translateY(-45%);
     translate: smooth;
+}
+@media (min-width:320px) {
+    .capsule-slider__card__info{
+        font-size: .05rem !important;
+    }
+    .capsule-slider__cards:hover{
+        scale: 3.5 !important;
+    }
+    .capsule-slider:hover img,.capsule-slider:hover video {
+        aspect-ratio: 1;
+        object-fit: fill;
+    }
+    .capsule-slider__cards:nth-child(1):hover,
+    .capsule-slider__cards:nth-child(2):hover,
+    .capsule-slider__cards:nth-child(3):hover,
+    .capsule-slider__cards:nth-child(4):hover,
+    .capsule-slider__cards:nth-child(5):hover,
+    .capsule-slider__cards:nth-child(6):hover,
+    .capsule-slider__cards:nth-child(7):hover{
+        transform:translateX(10%) translateY(5%);
+    }
+    .capsule-slider__cards:nth-child(10):hover,
+    .capsule-slider__cards:nth-child(15):hover,
+    .capsule-slider__cards:nth-child(16):hover,
+    .capsule-slider__cards:nth-child(17):hover,
+    .capsule-slider__cards:nth-child(18):hover,
+    .capsule-slider__cards:nth-child(19):hover,
+    .capsule-slider__cards:nth-child(20):hover{
+        transform:translateX(5%) translateY(-15%);
+        translate: smooth;
+    }
 }
     @media screen and (max-width:768px) {
         .capsule-slider__cards{
@@ -191,12 +323,20 @@
     align-items: center;
 }
 .capsule-slider__card__info__details{
-    font-size: .35rem;
     color: var(--neutral-color);
-    line-height: .65rem;
+}
+.capsule-slider__card__info > p:not(.capsule-slider__card__info__details) {
+    color: var(--neutral-color);
 }
 
-.capsule-slider__card__info > p:not(.capsule-slider__card__info__details) {
-    font-size: .5rem;
-    color: var(--neutral-color);
+@media (min-width:1028px){
+    .capsule-slider__card__info__details{
+        font-size: .35rem;
+        color: var(--neutral-color);
+        line-height: .65rem;
+    }
+    .capsule-slider__card__info > p:not(.capsule-slider__card__info__details) {
+        font-size: .5rem;
+        color: var(--neutral-color);
+    }
 }
