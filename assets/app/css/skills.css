@@ -1,7 +1,17 @@
 #Skills {
     background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--padding);
 }
 
+@media (min-width:320px) {
+    #Skills {
+        flex: 1 0 50%;
+        height: 100%;
+    }
+}
 
 .skillGridContainer{
     display: grid;

@@ -7,148 +7,447 @@
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <!--<link rel="preload" href="./css/style.css" as="style" type="text/css">-->
     <script src="./js/script.js" defer></script>
-
+    <script src="./js/pagelayout.js" defer></script>
+    <script src="./js/hero.js" defer></script>
+    <!--<script src="./js/header.js" defer></script>-->
     <title>Document</title>
 </head>
 <body>
+    <main class="carousel-wrapper">
+            <aside class="carousel-slide fade" id="Home" data-index="1" data-status="active">
+                <div class="social-links heroItems">
+                    <a href="https://github.com/Chukeze"><img src="../icons/icons/github.svg" alt="github" /></a>
+                    <a href="https://www.linkedin.com/in/chukwuebuka-ezeocha-2440321a1/"> <img src="../icons/icons/linkedin.svg" alt="linkedin"></a>
+                    <a href="../content/Chukwuebuka_Ezeocha.pdf" download="Chukwuebuka_Ezeocha"><img src="../icons/icons/download.svg" alt="Download resume" id="resume"></a>
+                </div>
+                <p id="Fullname" class="heroItems fancy">Chukwuebuka Ezeocha</p>
+            </aside>
+            <header class="carousel-slide fade" data-index="2" data-status="inactive">
+                <nav id="cards">
+                    <ul class="card">
+                        <li class="card-content link"><a class="links" href="#Home" onclick="currentSlide(1)">Home</a></li>
+                    </ul>
+                    <ul class="card">
+                        <li class="card-content"><a class="links" href="#About" target="_self" onclick="currentSlide(3)">About</a></li>
+                    </ul>
+                    <ul class="card">
+                        <li class="card-content"><a class="links" href="#Skill" target="_self" onclick="currentSlide(4)">Skill</a></li>
+                    </ul>
+                    <ul class="card">
+                        <li class="card-content"><a class="links" href="#Project" target="_self" onclick="currentSlide(5)">Project</a></li>
+                    </ul>
+                    <ul class="card">
+                        <li class="card-content"><a class="links" href="#Contact" onclick="currentSlide(7)">Contact</a></li>
+                    </ul>
+                    <ul class="card">
+                        <li class="card-content"><a class="links" href="../../index.html">Back To Selection Screen</a></li>
+                    </ul>
+                </nav>
+                <nav class="mobile hidden">
+                    <svg class="icon" id="menu">
+                        <use xlink:href="../icons/icons.svg#hamburger"></use>
+                    </svg>
+                </nav>
+            </header>
+            <section class="carousel-slide fade" id="About" data-index="3" data-status="inactive">
+                <h1>About</h1>
+                <div class="profile-card">
+                    <div class="profile-card__details">
+                        <p class="profile-card__content">
+                            I am a software engineer with a passion for coding, I am excited to explore new opportunities that allow me to expand my skill set and grow within the industry.
+                            I am experienced in modern web tech stack and programming languages, I am passionate about creating innovative software solutions that help businesses thrive in the digital age.
+                            My technical skills include proficiency in front-end development,
+                            using React and Typescript, as well as expertise in modern programming languages such as Python, Java, and C#.
+                            I have also demonstrated an ability to collaborate effectively with cross-functional teams and take ownership of projects from inception to delivery.
+                            With a strong foundation and a deep understanding of software engineering principles, including software design patterns, data structures, and algorithms,
+                            while also being comfortable working with various operating systems, databases,
+                            along with the experience of working on a variety of projects that involved building complex web applications and APIs.
+                            My goal as a software engineer is to continue building on my technical skills and contribute to the development of cutting-edge software solutions.
+                            I am eager to learn from experienced developers and take on challenging projects that push my boundaries.
+                            Ultimately, my aim is to become a proficient full-stack developer and leverage my knowledge to create software solutions that make a positive impact on society,
+                            and take on more leadership responsibilities, while collaborating with other experienced developers to tackle complex technical problems.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="carousel-slide fade" id="Skills" data-index="4" data-status="inactive">
+                <h1>Skills</h1>
+                <div class="skillGridContainer">
+                    <div class="skills-list"><img src="../icons/icons/React.png" alt="" class="icon"/><p>React</p></div>
+                    <div class="skills-list"><img src="../icons/icons/typescript.png" alt="" class="icon"/><p>Typescript</p></div>
+                    <div class="skills-list"><img src="../icons/icons/javascript.png" alt="" class="icon"/><p>Javascript</p></div>
+                    <div class="skills-list"><img src="../icons/icons/html.png" alt="" class="icon"/><p>Html</p></div>
+                    <div class="skills-list"><img src="../icons/icons/css.png" alt="" class="icon"/><p>Css3</p></div>
+                    <div class="skills-list"><img src="../icons/icons/java.png" alt="" class="icon"/><p>Java</p></div>
+                    <div class="skills-list"><img src="../icons/icons/csharp.svg" alt="" class="icon csharp" id="csharp"/><p>C#</p></div>
+                    <div class="skills-list"><img src="../icons/icons/python.png" alt="" class="icon"/><p>Python</p></div>
+                    <div class="skills-list"><img src="../icons/icons/express.svg" alt="" class="icon"/><p>Express</p></div>
+                    <div class="skills-list"><img src="../icons/icons/nodejs.svg" alt="" class="icon"/><p>NodeJs</p></div>
+                    <div class="skills-list"><img src="../icons/icons/php.png" alt="" class="icon"/><p>Php</p></div>
+                    <div class="skills-list"><img src="../icons/icons/mongodb.svg" alt="" class="icon"/><p>Mongodb</p></div>
+                    <div class="skills-list"><img src="../icons/icons/mysql.png" alt="" class="icon"/><p>Mysql</p></div>
+                    <div class="skills-list"><img src="../icons/icons/sass.png" alt="" class="icon"/><p>Sass</p></div>
+                    <div class="skills-list"><img src="../icons/icons/jest.png" alt="" class="icon"/><p>Jest</p></div>
+                    <div class="skills-list"><img src="../icons/icons/junit.png" alt="" class="icon"/><p>Junit</p></div>
+                    <div class="skills-list"><img src="../icons/icons/git.svg" alt="" class="icon"/><p>Git</p></div>
+                    <div class="skills-list"><img src="../icons/icons/figma.svg" alt="" class="icon"/><p>Figma</p></div>
+                    <div class="skills-list"><img src="../icons/icons/adobe.png" alt="" class="icon"/><p>Illustrator</p></div>
+                    <div class="skills-list"><img src="../icons/icons/adobephotoshop.png" alt="" class="icon"/><p>Photoshop</p></div>
+                    <div class="skills-list"><img src="../icons/icons/hadoop.png" alt="" class="icon"/><p>Hadoop</p></div>
+                </div>
+            </section>
+            <section class="carousel-slide fade" id="Project"  data-index="5" data-status="inactive">
+                <h1>Project</h1>
+                <div id="main-project-container">
+                    <div class="project-card">
+                        <div class="project-img">
+                            <video  style="width:100%" autoplay="true" canplaythrough loop="true" preload="auto" muted="true">
+                                <source src="../content/LAP Visualizer.mp4" type="video/mp4">                    
+                            </video>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info__title">LAP</div>
+                            <div class="project-info__contents">
+                                <p class="project-info__descriptions">
+                                    A desktop-based software that visualizes manufacturing data from any database,
+                                    eliminating the need for writing most PLC logic,
+                                    and streamlining plant floor troubleshooting by displaying PLC functions in
+                                    layman's terms. Implemented a universal sequencing approach driven by data,
+                                    which uses a hierarchy of sequences to deliver consistent and
+                                    contextual control and data where and when it is required. <br/>
+                                    This project makes lives for factory worker easier by allow them to 
+                                    easily track and control each processes and machines.
+                                </p>
+                                <p class="project-info__tech">Tech Stack: C#, .NET, WPF</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img"></div>
+                        <div class="project-info">
+                            <div class="project-info__title">REST Country API</div>
+                            <div class="project-info__contents">
+                                <p class="project-info__descriptions">
+                                    A desktop-based software that visualizes manufacturing data from any database,
+                                    eliminating the need for writing most PLC logic,
+                                    and streamlining plant floor troubleshooting by displaying PLC functions in
+                                    layman's terms. Implemented a universal sequencing approach driven by data,
+                                    which uses a hierarchy of sequences to deliver consistent and
+                                    contextual control and data where and when it is required. <br/>
+                                    This project makes lives for factory worker easier by allow them to 
+                                    easily track and control each processes and machines.
+                                </p>
+                                <p class="project-info__tech">Tech Stack: C#, .NET, WPF</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-img">
+                            <img src="../content/Interactive_Card_Detailer.jpeg" alt="Interactive_Card_Detailer"/>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-info__title">Interactive Card Detailer</div>
+                            <div class="project-info__contents">
+                                <p class="project-info__descriptions">
+                                    A desktop-based software that visualizes manufacturing data from any database,
+                                    eliminating the need for writing most PLC logic,
+                                    and streamlining plant floor troubleshooting by displaying PLC functions in
+                                    layman's terms. Implemented a universal sequencing approach driven by data,
+                                    which uses a hierarchy of sequences to deliver consistent and
+                                    contextual control and data where and when it is required. <br/>
+                                    This project makes lives for factory worker easier by allow them to 
+                                    easily track and control each processes and machines.
+                                </p>
+                                <p class="project-info__tech">Tech Stack: C#, .NET, WPF</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>                
+            <aside class="carousel-slide" id="SideProject">
+                <h2>Project Capsule</h2>
+                <div class="project-capsule">
+                    <p> Here is a slider of of all my projects. Hover on each to focus on it. </p>
+                    <div class="project-capsule-wrapper">
+                        <div class="capsule-slider">
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/FEM__Manage.jpg" alt="Manage"/>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p>Manage</p>
+                                    <p class="capsule-slider__card__info__details">Developed a landing page for a fictitious
+                                        finance management company with the goal
+                                        of attracting and engaging potential customers.
+                                        In addition to creating a visually appealing
+                                        responsive website, I integrated a newsletter
+                                        sign-up feature to attract new customers and
+                                        provide them with valuable financial information
+                                        on a regular basis. By utilizing an effective
+                                        email marketing strategy, the landing page is
+                                        able to convert website visitors into loyal
+                                        subscribers.</p>
+                                    <p>Tech Stack: HTML, CSS, Javascript, Git</p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/Gerich.jpeg" alt="Gerich">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p>Gerich</p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p>Tech Stack: React, TailwindCSS</p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/GPT3.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p>GPT3</p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p>Tech Stack: React Redux</p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video src="../content/Wiki Revision Finder.mp4" autoplay></video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p>Wiki Revision Finder</p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p>Tech Stack: Java, JavaFx, WikiAPI</p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/Expense_chart.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p>Expense Chart</p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p>Tech Stack: Html, CSS, Javascript, Json</p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/LouiseLashes.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p>LouiseLashes/p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p>Tech Stack: Html, css, javascript, Wix bookings.comApi</p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/Epic_Duel.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/DashboardUI.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/Etch_It.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/Bevel.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <img src="../content/TrendyApparellDarkMode.jpeg" alt="">
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video src="../content/Classic Game Gauntlet.mp4" loop="true" muted="true"  autoplay></video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video  style="width:100%" autoplay="true" canplaythrough loop="true" preload="auto" muted="true">
+                                        <source src="../content/PlanX.mp4" type="video/mp4">                    
+                                    </video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video  style="width:100%" autoplay="true" canplaythrough loop="true" preload="auto" muted="true">
+                                        <source src="../content/Quote Generator.mp4" type="video/mp4">                    
+                                    </video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video src="../content/Modal.mp4"  autoplay></video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video src="../content/QR Code Generator.mp4"  autoplay></video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video  style="width:100%" autoplay="true" canplaythrough loop="true" preload="auto" muted="true">
+                                        <source src="../content/Wordle Clone.mp4" type="video/mp4">                    
+                                    </video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video  style="width:100%" autoplay="true" canplaythrough loop="true" preload="auto" muted="true">
+                                        <source src="../content/Stopwatch.mp4" type="video/mp4">                    
+                                    </video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video  style="width:100%" autoplay="true" canplaythrough loop="true" preload="auto" muted="true">
+                                        <source src="../content/TimePicker.mp4" type="video/mp4">                    
+                                    </video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="capsule-slider__cards">
+                                <div class="capsule-slider__card__img">
+                                    <video  style="width:100%" autoplay="true" canplaythrough loop="true" preload="auto" muted="true">
+                                        <source src="../content/K-Means Visulizations.mp4" type="video/mp4">                    
+                                    </video>
+                                </div>
+                                <div class="capsule-slider__card__info">
+                                    <p></p>
+                                    <p class="capsule-slider__card__info__details"></p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="carousel-slide fade" id="Contact" data-index="7" data-status="inactive">
+                <h1>Contact</h1>
+                <h1 class="comment-reply-title">Message Me!</h1>
+                <div class="wrapper">
+                    <form id="commentform" class="comment-form">
+                        <div class="comment-form-name">
+                        <input id="name" placeholder="Name *" name="name" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245" required>
+                        <label for="name" data-help="¿Are you 11 from Stranger Things?">Name</label>
+                        </div>
+                        <div class="comment-form-surname">
+                        <input id="surname" placeholder="Surname *" name="surname" type="text" value="" size="30" maxlength="245" required>
+                        <label for="surname" data-help="A girl has no name- Arya Stark">Surname</label>
+                        </div>
+                        <div class="comment-form-email">
+                        <input id="email" placeholder="Email *" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required>
+                        <label for="email" data-help="Format email@email.com">Email</label>
+                        </div>
+                        <div class="comment-form-url">
+                        <input id="url" placeholder="Website" name="url" type="url" value="" size="30" maxlength="200">
+                        <label for="url" data-help="Should start with http:// o https://">Website</label>
+                        </div>
+                        <div class="comment-form-comment">
+                        <textarea textarea="" placeholder="Comment *" id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea>
+                        <label for="comment" data-help="Escribe algo! Lo primero que se te ocurra">Comment</label>
+                        </div>
+                        <div class="form-submit">
+                        <input name="submit" type="submit" id="submit" class="submit" value="Send Message">
+                        </div>
+                    </form>
+                </div>
+                <div class="success-modal hidden">
+                    <h1>Success!</h1>
+                    <button type="reset" id="close">Close</button>
+                </div>
+            </section>
+        
+    </main>
+    <article class="article-nav-section article-section">
+        <button id="upbutton" class="article-nav-button" type="button" onclick="nextSlide(-1)">Up</button>
+        <button id="downbutton" class="article-nav-button" type="button" onclick="nextSlide(1)">Down</button>
+    </article>
+    <script src="https://unpkg.com/feather-icons"></script>
+</body>
+</html>
     <!--               
         <svg class="icon" id="website">
             <use xlink:href="../icons/icons.svg#website"></use>
         </svg>
-        <div class="hamburgermenu">
-            <svg class="icon" id="menu">
-                <use xlink:href="../icons/icons.svg#hamburger"></use>
-            </svg>
-        </div>-->
-    <main>
-        <aside id="Home" data-index="1" data-status="active">
-            <div class="social-links heroItems">
-                <img src="../icons/icons/github-brands.svg" alt="github" />
-                <p>linkedIn</p>
-            </div>
-            <p id="Fullname" class="heroItems fancy">Chukwuebuka Ezeocha</p>
-        </aside>
-        <header data-index="2" data-status="inactive">
-            <nav id="cards">
-                <ul class="card">
-                    <li class="card-content"><a href="#Home">Home</a></li>
-                </ul>
-                <ul class="card">
-                    <li class="card-content"><a href="#About">About</a></li>
-                </ul>
-                <ul class="card">
-                    <li class="card-content"><a href="#Skill">Skill</a></li>
-                </ul>
-                <ul class="card">
-                    <li class="card-content"><a href="#Project">Project</a></li>
-                </ul>
-                <ul class="card">
-                    <li class="card-content"><a href="#Contact">Contact</a></li>
-                </ul>
-                <ul class="card">
-                    <li class="card-content"><a href="../../index.html">Back To Selection Screen</a></li>
-                </ul>
-            </nav>
-        </header>    
-        <section id="About" data-index="3" data-status="inactive"> 
-            <h1>About</h1>
-            <div class="profile-card">
-                <div class="profile-card__details">
-                    <p class="profile-card__content">
-                        I am a software engineer with a passion for coding, I am excited to explore new opportunities that allow me to expand my skill set and grow within the industry.
-                        I am experienced in modern web tech stack and programming languages, I am passionate about creating innovative software solutions that help businesses thrive in the digital age.
-                        My technical skills include proficiency in front-end development,
-                        using React and Typescript, as well as expertise in modern programming languages such as Python, Java, and C#.
-                        I have also demonstrated an ability to collaborate effectively with cross-functional teams and take ownership of projects from inception to delivery.
-                        With a strong foundation and a deep understanding of software engineering principles, including software design patterns, data structures, and algorithms,
-                        while also being comfortable working with various operating systems, databases,
-                        along with the experience of working on a variety of projects that involved building complex web applications and APIs.
-                        My goal as a software engineer is to continue building on my technical skills and contribute to the development of cutting-edge software solutions.
-                        I am eager to learn from experienced developers and take on challenging projects that push my boundaries.
-                        Ultimately, my aim is to become a proficient full-stack developer and leverage my knowledge to create software solutions that make a positive impact on society,
-                        and take on more leadership responsibilities, while collaborating with other experienced developers to tackle complex technical problems.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="Skills" data-index="4" data-status="inactive">
-            <h1>Skills</h1>
-            <div class="skillGridContainer">
-                <div class="skills-list"><img src="../icons/icons/React.png" alt="" class="icon"/><p>React</p></div>
-                <div class="skills-list"><img src="../icons/icons/typescript.png" alt="" class="icon"/><p>Typescript</p></div>
-                <div class="skills-list"><img src="../icons/icons/javascript.png" alt="" class="icon"/><p>Javascript</p></div>
-                <div class="skills-list"><img src="../icons/icons/html.png" alt="" class="icon"/><p>Html</p></div>
-                <div class="skills-list"><img src="../icons/icons/css.png" alt="" class="icon"/><p>Css3</p></div>
-                <div class="skills-list"><img src="../icons/icons/java.png" alt="" class="icon"/><p>Java</p></div>
-                <div class="skills-list"><img src="../icons/icons/csharp.svg" alt="" class="icon csharp" id="csharp"/><p>C#</p></div>
-                <div class="skills-list"><img src="../icons/icons/python.png" alt="" class="icon"/><p>Python</p></div>
-                <div class="skills-list"><img src="../icons/icons/express.svg" alt="" class="icon"/><p>Express</p></div>
-                <div class="skills-list"><img src="../icons/icons/nodejs.svg" alt="" class="icon"/><p>NodeJs</p></div>
-                <div class="skills-list"><img src="../icons/icons/php.png" alt="" class="icon"/><p>Php</p></div>
-                <div class="skills-list"><img src="../icons/icons/mongodb.svg" alt="" class="icon"/><p>Mongodb</p></div>
-                <div class="skills-list"><img src="../icons/icons/mysql.png" alt="" class="icon"/><p>Mysql</p></div>
-                <div class="skills-list"><img src="../icons/icons/sass.png" alt="" class="icon"/><p>Sass</p></div>
-                <div class="skills-list"><img src="../icons/icons/jest.png" alt="" class="icon"/><p>Jest</p></div>
-                <div class="skills-list"><img src="../icons/icons/junit.png" alt="" class="icon"/><p>Junit</p></div>
-                <div class="skills-list"><img src="../icons/icons/git.svg" alt="" class="icon"/><p>Git</p></div>
-                <div class="skills-list"><img src="../icons/icons/figma.svg" alt="" class="icon"/><p>Figma</p></div>
-                <div class="skills-list"><img src="../icons/icons/adobe.png" alt="" class="icon"/><p>Illustrator</p></div>
-                <div class="skills-list"><img src="../icons/icons/adobephotoshop.png" alt="" class="icon"/><p>Photoshop</p></div>
-                <div class="skills-list"><img src="../icons/icons/hadoop.png" alt="" class="icon"/><p>Hadoop</p></div>
-            </div>
-        </section>
-        <section id="Project"  data-index="5" data-status="inactive">
-            <h1>Project</h1>
-            <div id="project">
-
-            </div>
-            <aside>
-                <h2>Side Project</h2>
-            </aside>
-        </section>
-        <section id="Contact" data-index="6" data-status="inactive">
-            <h1>Contact</h1>
-            <h1 class="comment-reply-title">Message Me!</h1>
-            <div class="wrapper">
-                <form id="commentform" class="comment-form">
-                    <div class="comment-form-name">
-                    <input id="name" placeholder="Name *" name="name" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245" required>
-                    <label for="name" data-help="¿Are you 11 from Stranger Things?">Name</label>
-                    </div>
-                    <div class="comment-form-surname">
-                    <input id="surname" placeholder="Surname *" name="surname" type="text" value="" size="30" maxlength="245" required>
-                    <label for="surname" data-help="A girl has no name- Arya Stark">Surname</label>
-                    </div>
-                    <div class="comment-form-email">
-                    <input id="email" placeholder="Email *" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required>
-                    <label for="email" data-help="Format email@email.com">Email</label>
-                    </div>
-                    <div class="comment-form-url">
-                    <input id="url" placeholder="Website" name="url" type="url" value="" size="30" maxlength="200">
-                    <label for="url" data-help="Should start with http:// o https://">Website</label>
-                    </div>
-                    <div class="comment-form-comment">
-                    <textarea textarea="" placeholder="Comment *" id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea>
-                    <label for="comment" data-help="Escribe algo! Lo primero que se te ocurra">Comment</label>
-                    </div>
-                    <div class="form-submit">
-                    <input name="submit" type="submit" id="submit" class="submit" value="Send Message">
-                    </div>
-                </form>
-            </div>
-            <div class="success-modal hidden">
-                <h1>Success!</h1>
-                <button type="reset" id="close">Close</button>
-            </div>
-        </section>
-    </main>
-    <article class="article-nav-section article-section">
-        <button id="upbutton" class="article-nav-button" type="button" onclick="handleUpClick()">Up</button>
-        <button id="downbutton" class="article-nav-button" type="button" onclick="handleDownClick()">Down</button>
-    </article>
-</body>
-</html>
-
+    -->
                <!--<div class="skills-list">
                     <svg class="icon react" >
                         <use xlink:href="../icons/icons.svg#React"></use>

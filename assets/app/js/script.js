@@ -25,43 +25,65 @@ function cardHover () {
 }
 cardHover();
 
+
+
+/*
 const slides = document.querySelectorAll(`[data-status]`);
 let currentSlide = document.querySelector(`[data-status="active"]`);
 let idx = currentSlide.dataset.index;
 let nextSlide = slides.item(Number(idx));
 //let prevSlide = slides.item((Number(idx) - 1));
 let prevSlide;
-
+const carousel = document.querySelector('.carousel-wrapper');
 const handleUpClick = () =>{
+
+    prevSlide = currentSlide.previousElementSibling;
     let testidx = currentSlide.dataset.index;
-    if((idx < 1 || idx > 6) || (testidx < 1 || testidx > 6) ) {
+    if((idx < 1 || idx > 6) || (testidx < 1 || testidx > 6) || (currentSlide.previousElementSibling == null) ) {
         console.log('hey')
-        let resetidx = 1;
         console.log('me')
-        idx = prevSlide.dataset.index = `${resetidx + 1}`;
-        prevSlide = slides.item((Number(resetidx))).dataset.status ='active';
-        document.querySelector(`[data-status=${slides.item((Number(resetidx))).dataset.status ='active'}]`)
-        console.log(document.querySelector(`[data-status=${slides.item((Number(resetidx))).dataset.status ='active'}]`));
+        //handle certain edge cases
+        prevSlide = slides.item((Number(idx) + 4));
+        idx = prevSlide.dataset.index;
+        currentSlide.dataset.status = 'active';
+        currentSlide = slides.item((Number(idx) - 1));
+        //currentSlide.dataset.status = 'active';
+        //currentSlide.nextElementSibling.dataset.status = 'inactive'
+        console.log(currentSlide)
+        
+        console.log(prevSlide);
+        let changeToSlide  = prevSlide;
+        currentSlide = changeToSlide;
+        //currentSlide.dataset.status = 'active';
+        //slides.item(0).dataset.status = 'inactive';
+        //let changeStatus = currentSlide.nextElementSibling.dataset.status = 'inactive';
+        //let b = document.querySelector(`[data-status=${slides.item((Number(resetidx))).dataset.status ='active'}]`).dataset.status = 'inactive';
+      console.log("finished")
         //currentSlide.dataset.status = "inactive";
         //nextSlide.dataset.status = "active";
-        prevSlide = slides.item((Number(idx) - 1));
+        
     }else{
         currentSlide.dataset.status = "inactive";
         //prevSlide.dataset.status = "active";
 
         prevSlide = currentSlide.previousElementSibling;
+        const amountToMove = prevSlide.style.bottom;
         currentSlide = prevSlide;
         currentSlide.dataset.status = "active";
         //console.log(currentSlide);
         //console.log(prevSlide);
+        const carouselHeight = document.querySelector('.carousel-wrapper').getBoundingClientRect().height;
+        console.log(carousel.offsetHeight);
+
         const rect = currentSlide.getBoundingClientRect(),
             height = rect.height,
             y = rect.y;
             //console.log(height);
-            currentSlide.style.setProperty('--height', `${-height}px`);
-            currentSlide.style.setProperty('--y-coord',`${y}px`)
+            currentSlide.style.setProperty('--height', `${(carousel.offsetHeight)}px`);
+            currentSlide.style.setProperty('--y-coord',`${((((carousel.offsetHeight) + (carouselHeight) / height) / (height - y) *  y) * -1)}px`)
+            console.log(((((carousel.offsetHeight * y) + (carouselHeight * y) / height) * (height * y) + y) * -1) + " px")
         idx = currentSlide.dataset.index;
-        currentSlide.style.transform= `translateX(0%) translateY(calc(0% - ${Math.max(height,y) * 4}))`;
+        //currentSlide.style.transform= `translateX(0%) translateY(calc(0% - ${Math.max(height,y) * 7}))`;
         console.log(idx);
         
         //prevSlide = slides.item((Number(idx) - 1));
@@ -105,9 +127,9 @@ const handleDownClick = () => {
     const rect = slide.getBoundingClientRect(),
       y = rect.height;
     slide.style.setProperty("--offset", `${y}px`);
-  }*/
+  }
 };
-
+*/
 
 //window.window.onload(handleDownClick());
 /*function updateSlide(){
@@ -186,7 +208,7 @@ const handleDownClick = () => {
   });
 }
 
-/* -- Mobile Nav Toggle -- */
+/* -- Mobile Nav Toggle -- 
 
 const nav = document.querySelector("nav");
 
@@ -201,45 +223,4 @@ window.matchMedia("(max-width: 800px)").onchange = e => {
 
   nav.dataset.toggled = "false";
 };
-
-
-function scramble () {
-  const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-  const enhance = id => {
-    const element = document.getElementById(id),
-          text = element.innerText.split("");
-    
-    element.innerText = "";
-    
-    text.forEach((value, index) => {
-      const outer = document.createElement("span");
-      
-      outer.className = "outer";
-      
-      const inner = document.createElement("span");
-      
-      inner.className = "inner";
-      
-      inner.style.animationDelay = `${rand(-5000, 0)}ms`;
-      
-      const letter = document.createElement("span");
-      
-      letter.className = "letter";
-      
-      letter.innerText = value;
-      
-      letter.style.animationDelay = `${index * 1000 }ms`;
-      
-      inner.appendChild(letter);    
-      
-      outer.appendChild(inner);    
-      
-      element.appendChild(outer);
-    });
-  }
-
-  enhance("Fullname");
-}
-
-scramble();
+*/

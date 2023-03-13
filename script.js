@@ -30,7 +30,7 @@ function shapeChange() {
             wrapper.dataset.roundness = combination.roundness;
 
             prev =  index;
-    },1200);
+    },2200);
 }
 shapeChange()
 
@@ -47,84 +47,13 @@ function changeText() {
 }
 
 changeText();
+
 /*
-
-function navigate() {
-  const cta = document.querySelectorAll('span');
-  const buttons = document.querySelectorAll('.shape');
-  let url = '';
-  let urlList = {
-    home:'./assets/app/index.html',
-    header:'./assets/app/index.html#Header',
-    about:'./assets/app/index.html#About',
-    skill:'./assets/app/index.html#Skills',
-    project:'./assets/app/index.html#Project',
-    sideproject:'./assets/app/index.html#SideProjects',
-    contact:'./assets/app/index.html#Contact',
-  };
-  
-  buttons.forEach(el => el.addEventListener('click', () => {
-    cta.forEach(item => {
-      let buttondata = item.dataset.id;
-      const grabKeys = Object.keys(urlList);
-      for (const key of grabKeys) {
-        if (buttondata == key) {
-          let chosenUrl = buttondata;
-          url = urlList[chosenUrl];
-          const navigationTarget = el;
-          navigationTarget.target = '_blank';
-          navigationTarget.href = url;
-          navigationTarget.click(); // trigger the click event
-        }
-      }
-    });
-  }));
-}
-
-navigate();
-
-function navigate() {
-    const cta = document.querySelectorAll('span');
-    const buttons = document.querySelectorAll('.shape');
-    let url = '';
-    let urlList = {
-        home:'./assets/app/index.html',
-        header:'./assets/app/index.html#Header',
-        about:'./assets/app/index.html#About',
-        skill:'./assets/app/index.html#Skills',
-        project:'./assets/app/index.html#Project',
-        sideproject:'./assets/app/index.html#SideProjects',
-        contact:'./assets/app/index.html#Contact',
-    };
-    buttons.forEach(el => el.addEventListener('click', () =>{
-        cta.forEach( item => {
-            let buttondata = item.dataset.id;
-            console.log(item);
-            //console.log(buttondata)
-            const grabKeys = Object.keys(urlList);
-            for (const key of grabKeys) {
-                if(buttondata == key){
-                    //console.log(buttondata)
-                    //let chosenUrl = key.valueOf(buttondata);
-                    let chosenUrl = buttondata;
-                    console.log(chosenUrl)
-                    //console.log( urlList[chosenUrl])
-                    //console.log(urlList[key]);
-                    //console.log(typeof ['hi','k'])
-                    url = urlList[chosenUrl];
-                    //console.log(url)
-                    const navigationTarget = el;
-                    navigationTarget.setAttribute('target', '_blank');
-                    navigationTarget.setAttribute('href', url);
-                    //console.log(navigationTarget);
-                    navigationTarget.target = '_blank';
-                    navigationTarget.href = url;
-                    //window.open(navigationTarget, target="_blank");
-                }
-            }
-        })
-        
-    })
-    )
-}
-navigate();*/
+function onOpenToSlide(){
+    document.querySelectorAll('.shape').forEach(
+        item => item.addEventListener('click', 
+            ()=>{
+                currentSlide([item])
+            })
+        )
+}*/
