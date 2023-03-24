@@ -67,8 +67,21 @@
 .social-links{
     flex-grow: .5;
 }
+.social-links > a{
+    text-decoration: none;
+    color: var(--neutral-color);
+}
 #Fullname{
     font-size: 5rem;
+}
+@media(min-width:320px){
+    #Fullname{font-size: 1rem !important;}
+}
+@media(min-width:768px){
+    #Fullname{font-size: 2rem;}
+}
+@media(max-width:1024px){
+    #Fullname{font-size: 1.75rem;}
 }
 .fancy span {
     display: inline-block;

@@ -97,7 +97,7 @@ ul li {
 .card-content > .icon {
     opacity: .25;
 }
-
+/*
 @media (max-width:1000px) {
     #cards {
         max-width: 1000px;
@@ -108,11 +108,9 @@ ul li {
         flex-shrink: 1;
         width: calc(50% - 4px);
     }
-}
+}*/
 
-@media (min-width: 720px) {
 
-}
 
 
 @media (min-width:320px) {
@@ -126,6 +124,26 @@ ul li {
         height: 50px;
     }
     .card-content{
+        text-align: center;
+    }
+    .links{
+        font-size: smaller;
+    }
+}
+@media (min-width: 768px) {
+    header #cards {
+        flex-wrap: nowrap;
+        width: calc(100% - 20px);
+        gap: 8px;
+    }
+    .card{
+        width: 100%;
+        height: 75px;
+        align-items: center;
+        justify-content: center;
+    }
+    .card > .card-content {
+        align-items: center;
         text-align: center;
     }
 }
