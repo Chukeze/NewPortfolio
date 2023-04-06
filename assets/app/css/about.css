@@ -59,7 +59,7 @@
     box-shadow: 5px 5px 5px 3px rgba(4, 4, 4, .8);
     width: fit-content;
     overflow: hidden;
-    background-color: var(--element--color);
+    background-color: var(--element-color);
 
     justify-self: flex-start;
 }

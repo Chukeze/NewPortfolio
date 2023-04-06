@@ -47,13 +47,3 @@ function changeText() {
 }
 
 changeText();
-
-/*
-function onOpenToSlide(){
-    document.querySelectorAll('.shape').forEach(
-        item => item.addEventListener('click', 
-            ()=>{
-                currentSlide([item])
-            })
-        )
-}*/

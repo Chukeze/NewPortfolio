@@ -14,7 +14,7 @@
 </head>
 <body>
     <main class="carousel-wrapper">
-            <aside class="carousel-slide fade" id="Home" data-index="1" data-status="active">
+            <aside class="carousel-slide fade" id="Home" data-index="0" data-status="active">
                 <div class="social-links heroItems">
                     <a href="https://github.com/Chukeze"><img src="../icons/icons/github.svg" alt="github" />Github</a>
                     <a href="https://www.linkedin.com/in/chukwuebuka-ezeocha-2440321a1/"><img src="../icons/icons/linkedin.svg" alt="linkedin">LinkedIn</a>
@@ -22,7 +22,7 @@
                 </div>
                 <p id="Fullname" class="heroItems fancy">Chukwuebuka Ezeocha</p>
             </aside>
-            <header class="carousel-slide fade" data-index="2" data-status="inactive">
+            <header class="carousel-slide fade" id="Header" data-index="1" data-status="inactive">
                 <nav id="cards">
                     <ul class="card">
                         <li class="card-content link"><a class="links" href="#Home" onclick="currentSlide(1)">Home</a></li>
@@ -44,7 +44,7 @@
                     </ul>
                 </nav>
             </header>
-            <section class="carousel-slide fade" id="About" data-index="3" data-status="inactive">
+            <section class="carousel-slide fade" id="About" data-index="2" data-status="inactive">
                 <h1>About</h1>
                 <div class="profile-card">
                     <div class="profile-card__details">
@@ -65,7 +65,7 @@
                     </div>
                 </div>
             </section>
-            <section class="carousel-slide fade" id="Skills" data-index="4" data-status="inactive">
+            <section class="carousel-slide fade" id="Skills" data-index="3" data-status="inactive">
                 <h1>Skills</h1>
                 <div class="skillGridContainer">
                     <div class="skills-list"><img src="../icons/icons/React.png" alt="" class="icon"/><p>React</p></div>
@@ -91,7 +91,7 @@
                     <div class="skills-list"><img src="../icons/icons/hadoop.png" alt="" class="icon"/><p>Hadoop</p></div>
                 </div>
             </section>
-            <section class="carousel-slide fade" id="Project"  data-index="5" data-status="inactive">
+            <section class="carousel-slide fade" id="Project"  data-index="4" data-status="inactive">
                 <h1>Project</h1>
                 <div id="main-project-container">
                     <div class="project-card">
@@ -162,7 +162,7 @@
                 </div>
 
             </section>                
-            <aside class="carousel-slide" id="SideProject" data-index="6">
+            <aside class="carousel-slide" id="SideProject" data-index="5">
                 <h2>Project Capsule</h2>
                 <div class="project-capsule">
                     <p> Here is more projects I have done. Hover on each to focus on it. </p>
@@ -550,15 +550,16 @@
                                     <p>tech stack: python</p>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
             </aside>
-            <section class="carousel-slide fade" id="Contact" data-index="7" data-status="inactive">
+            <section class="carousel-slide fade" id="Contact" data-index="6" data-status="inactive">
                 <h1>Contact</h1>
                 <h1 class="comment-reply-title">Message Me!</h1>
                 <div class="wrapper">
-                    <form id="commentform" class="comment-form">
+                    <form action="https://formsubmit.co/518cd948b7c7f6b30eb2233b342d538b" method="post" id="commentform" class="comment-form">
                         <div class="comment-form-name">
                         <input id="name" placeholder="Name *" name="name" type="text" value="" pattern="^[^0-9]+$" size="30" maxlength="245" required>
                         <label for="name" data-help="¿Are you 11 from Stranger Things?">Name</label>
@@ -568,8 +569,11 @@
                         <label for="surname" data-help="A girl has no name- Arya Stark">Surname</label>
                         </div>
                         <div class="comment-form-email">
-                        <input id="email" placeholder="Email *" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required>
+                        <input id="email" placeholder="Email Address" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required>
                         <label for="email" data-help="Format email@email.com">Email</label>
+                        </div>
+                        <div>
+                            <input type="hidden" name="_subject" value="New Email!">
                         </div>
                         <div class="comment-form-url">
                         <input id="url" placeholder="Website" name="url" type="url" value="" size="30" maxlength="200">
@@ -579,14 +583,18 @@
                         <textarea textarea="" placeholder="Comment *" id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea>
                         <label for="comment" data-help="Escribe algo! Lo primero que se te ocurra">Comment</label>
                         </div>
+                        <div>
+                            <input type="hidden" name="_next" value="https://www.chukwuebukaezeocha.com/assets/app/index.html#Contact">
+                        </div>
                         <div class="form-submit">
                         <input name="submit" type="submit" id="submit" class="submit" value="Send Message">
                         </div>
                     </form>
                 </div>
-                <div class="success-modal hidden">
+                <div id="Success" class="success-modal hidden">
                     <h1>Success!</h1>
-                    <button type="reset" id="close">Close</button>
+                    <p>Thank you for emailing me, look out in your email for my response</p>
+                    <button form="contactform" type="reset" id="close">Close</button>
                 </div>
             </section>
         

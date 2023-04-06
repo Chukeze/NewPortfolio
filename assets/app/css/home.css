@@ -2,7 +2,7 @@
 :root{
     --bg-color: linear-gradient(180deg,rgba(115,113,113,.22) 0%, rgba(66,64,64,.4859) 42.01%, rgba(48,46,46,1) 98.26%);
 
-    --element--color: rgb(43,45,66);
+    --element-color: rgb(43,45,66);
     --neutral-color: rgb(237,242,244);
     --accent-color: rgb(141,153,174);
 
@@ -97,13 +97,14 @@ section > h1 {
 .article-nav-button{
     margin: 0;
     padding: 0;
-    background-color: var(--element--color);
+    background-color: var(--element-color);
     flex: 1 0 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #FFFFFF;
 }
 
 @media (min-width: 320px) {
@@ -117,7 +118,7 @@ section > h1 {
     .article-nav-button{
         margin: 0;
         padding: 0;
-        background-color: var(--element--color);
+        background-color: var(--element-color);
         flex: .5 1 10%;
     }
 }
@@ -133,7 +134,7 @@ section > h1 {
     .article-nav-button{
         margin: 0;
         padding: 0;
-        background-color: var(--element--color);
+        background-color: var(--element-color);
         flex: .5 1 10%;
     }
 }
@@ -150,7 +151,7 @@ section > h1 {
     .article-nav-button{
         margin: 0;
         padding: 0;
-        background-color: var(--element--color);
+        background-color: var(--element-color);
         flex: .5 1 10%;
     }
 }
@@ -168,7 +169,7 @@ section > h1 {
     .article-nav-button{
         margin: 0;
         padding: 0;
-        background-color: var(--element--color);
+        background-color: var(--element-color);
         flex: .75 1 25%;
     }
 }
@@ -185,7 +186,7 @@ section > h1 {
     .article-nav-button{
         margin: 0;
         padding: 0;
-        background-color: var(--element--color);
+        background-color: var(--element-color);
         flex: 1 1 50%;
     }
 }

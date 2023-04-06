@@ -33,6 +33,7 @@
     justify-content: space-evenly;
     align-items: flex-start;
     gap: 1rem;
+
 }
 
 .social-links img{
@@ -65,11 +66,12 @@
     font-family: var(--hero-font-family);
 }
 .social-links{
-    flex-grow: .5;
+    max-height: 250px;
+    height: 175px;
 }
 .social-links > a{
     text-decoration: none;
-    color: var(--neutral-color);
+    color: var(--element-color);
 }
 #Fullname{
     font-size: 5rem;
@@ -102,9 +104,9 @@
 .fancy:hover > .outer > .inner > .letter {
     background: linear-gradient(
         to right, 
-        var(--element--color),
+        var(--element-color),
         var(--accent-color),
-        var(--element--color)
+        var(--element-color)
     );
     background-size: 1000%;
     -webkit-background-clip: text;
